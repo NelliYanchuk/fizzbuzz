@@ -1,4 +1,4 @@
-package dev.nyanchuk;
+package dev.nyanchuk.fizzbuzz;
 
 /**
  * Hello world!
