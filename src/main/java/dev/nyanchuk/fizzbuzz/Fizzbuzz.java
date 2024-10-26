@@ -9,17 +9,20 @@ public class Fizzbuzz {
     }
 
     // function
-    public String FizzBuzzEvaluator1(int number) {
-        if (number % 3 == 0) {
+    public static String FizzBuzzEvaluator1(int num) {
+        if ((num<1)||(num>100)) {
+            return "Use the range 1 to 100";
+        }
+        if ((num % 3 == 0) && (num % 5 == 0)) {
+            return "FizzBuzz";
+        }
+        if (num % 3 == 0) {
             return "Fizz";
         }
-        if (number % 5 == 0) {
+        if (num % 5 == 0) {
             return "Buzz";
-        }
-        if ((number % 3 == 0) && (number % 5 == 0)) {
-            return "FizzBuzz";
         } else {
-            return String.valueOf(this.number);
+            return String.valueOf(num);
         }
     }
 }
