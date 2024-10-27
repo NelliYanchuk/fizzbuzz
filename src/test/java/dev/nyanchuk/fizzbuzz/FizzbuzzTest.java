@@ -14,12 +14,12 @@ public class FizzbuzzTest {
         assertEquals(response, Fizzbuzz.FizzBuzzEvaluator1((byte) 0));
         assertEquals(response, Fizzbuzz.FizzBuzzEvaluator1((byte) 127));
     }
-    
-    // Test single divisibility 
+
+    // Test single divisibility
     @Test
     public void testDivisibleByThree() {
         for (byte i = 1; i <= 100; i++) {
-            if ((i % 3 == 0) && (i % 5 != 0)) { // Only numbers divisible by 3
+            if ((i % 3 == 0) && (i % 5 != 0)) {
                 assertEquals("Fizz", Fizzbuzz.FizzBuzzEvaluator1(i));
             }
         }
@@ -28,7 +28,7 @@ public class FizzbuzzTest {
     @Test
     public void testDivisibleByFive() {
         for (byte i = 1; i <= 100; i++) {
-            if ((i % 5 == 0) && (i % 3 != 0)) { // Only numbers divisible by 5
+            if ((i % 5 == 0) && (i % 3 != 0)) {
                 assertEquals("Buzz", Fizzbuzz.FizzBuzzEvaluator1(i));
             }
         }
@@ -38,7 +38,7 @@ public class FizzbuzzTest {
     @Test
     public void testDivisibleByThreeAndFive() {
         for (byte i = 1; i <= 100; i++) {
-            if ((i % 3 == 0) && (i % 5 == 0)) { // Only numbers divisible by 3 AND by 5
+            if ((i % 3 == 0) && (i % 5 == 0)) {
                 assertEquals("FizzBuzz", Fizzbuzz.FizzBuzzEvaluator1(i));
             }
         }
@@ -48,7 +48,7 @@ public class FizzbuzzTest {
     @Test
     public void testNotDivisibleByThreeOrFive() {
         for (byte i = 1; i <= 100; i++) {
-            if ((i % 3 != 0) && (i % 5 != 0)) { // Only numbers NOT divisible by 3 or by 5
+            if ((i % 3 != 0) && (i % 5 != 0)) {
                 assertEquals(String.valueOf(i), Fizzbuzz.FizzBuzzEvaluator1(i));
             }
         }

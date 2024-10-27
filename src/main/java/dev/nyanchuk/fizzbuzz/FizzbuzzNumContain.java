@@ -9,16 +9,16 @@ public class FizzbuzzNumContain {
     }
 
     // function
-    public static String FizzBuzzEvaluator2(byte num) {   
+    public static String FizzBuzzEvaluator2(byte num) {
 
         if (num < 1 || num > 100) {
             return "Use the range 1 to 100";
         }
         // this part is not in requirements but according to my logic has to be here.
-        //if (((num % 3 == 0) || String.valueOf(num).contains("3")) 
-        //    && ((num % 5 == 0) || String.valueOf(num).contains("5"))) {
-        //    return "FizzBuzz";
-        //}
+        // if (((num % 3 == 0) || String.valueOf(num).contains("3"))
+        // && ((num % 5 == 0) || String.valueOf(num).contains("5"))) {
+        // return "FizzBuzz";
+        // }
         if ((num % 3 == 0) || String.valueOf(num).contains("3")) {
             return "Fizz";
         }
@@ -27,5 +27,5 @@ public class FizzbuzzNumContain {
         }
         return String.valueOf(num);
     }
-    
+
 }
