@@ -31,7 +31,20 @@ public class FizzbuzzTest {
         assertEquals("Buzz", Fizzbuzz.FizzBuzzEvaluator((byte) 100));
     }
 
-    
+     // Test containing the digits only, not divisible
+     @Test
+     public void testContainsDigitThreeOnly() {
+         assertEquals("Fizz", Fizzbuzz.FizzBuzzEvaluator((byte) 13));
+         assertEquals("Fizz", Fizzbuzz.FizzBuzzEvaluator((byte) 37));
+         assertEquals("Fizz", Fizzbuzz.FizzBuzzEvaluator((byte) 83));
+     }
+ 
+     @Test
+     public void testContainsDigitFiveOnly() {
+         assertEquals("Buzz", Fizzbuzz.FizzBuzzEvaluator((byte) 52));
+         assertEquals("Buzz", Fizzbuzz.FizzBuzzEvaluator((byte) 58));
+         assertEquals("Buzz", Fizzbuzz.FizzBuzzEvaluator((byte) 59));
+     }
     // Test combination logic
     @Test
     public void testDivisibleByThreeAndFive() {
