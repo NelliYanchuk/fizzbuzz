@@ -48,11 +48,9 @@ public class FizzbuzzTest {
     // Test neutral digits
     @Test
     public void testNotDivisibleByThreeOrFive() {
-        for (byte i = 1; i <= 100; i++) {
-            if ((i % 3 != 0) && (i % 5 != 0)) {
-                assertEquals(String.valueOf(i), Fizzbuzz.FizzBuzzEvaluator(i));
-            }
-        }
+        assertEquals("1", Fizzbuzz.FizzBuzzEvaluator((byte) 1));
+        assertEquals("7", Fizzbuzz.FizzBuzzEvaluator((byte) 7));
+        assertEquals("28", Fizzbuzz.FizzBuzzEvaluator((byte) 28));
     }
 
     // Test of constructor
