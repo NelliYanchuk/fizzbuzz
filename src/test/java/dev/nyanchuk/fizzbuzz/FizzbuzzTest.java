@@ -11,7 +11,7 @@ public class FizzbuzzTest {
         String response = "Use the range 1 to 100";
         assertEquals(response, Fizzbuzz.FizzBuzzEvaluator((byte) 0));
         assertEquals(response, Fizzbuzz.FizzBuzzEvaluator((byte) -1));
-        assertEquals(response, Fizzbuzz.FizzBuzzEvaluator((byte) 50));
+        assertEquals(response, Fizzbuzz.FizzBuzzEvaluator((byte) 101));
         assertEquals(response, Fizzbuzz.FizzBuzzEvaluator((byte) 127));
         assertEquals(response, Fizzbuzz.FizzBuzzEvaluator((byte) -128));
     }
@@ -49,14 +49,14 @@ public class FizzbuzzTest {
     // Test divisibility and containing digits
     @Test
     public void testtDivisibleAndContainsDigitThree() {
-        assertEquals("Fizz", Fizzbuzz.FizzBuzzEvaluator((byte) 30));
         assertEquals("Fizz", Fizzbuzz.FizzBuzzEvaluator((byte) 33));
+        assertEquals("Fizz", Fizzbuzz.FizzBuzzEvaluator((byte) 36));
         assertEquals("Fizz", Fizzbuzz.FizzBuzzEvaluator((byte) 93));
     }
 
     @Test
     public void testtDivisibleAndContainsDigitFive() {
-        assertEquals("Buzz", Fizzbuzz.FizzBuzzEvaluator((byte) 15));
+        assertEquals("Buzz", Fizzbuzz.FizzBuzzEvaluator((byte) 25));
         assertEquals("Buzz", Fizzbuzz.FizzBuzzEvaluator((byte) 55));
         assertEquals("Buzz", Fizzbuzz.FizzBuzzEvaluator((byte) 95));
     }
