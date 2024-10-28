@@ -31,22 +31,36 @@ public class FizzbuzzTest {
         assertEquals("Buzz", Fizzbuzz.FizzBuzzEvaluator((byte) 100));
     }
 
-     // Test containing the digits only, not divisible
-     @Test
-     public void testContainsDigitThreeOnly() {
-         assertEquals("Fizz", Fizzbuzz.FizzBuzzEvaluator((byte) 13));
-         assertEquals("Fizz", Fizzbuzz.FizzBuzzEvaluator((byte) 37));
-         assertEquals("Fizz", Fizzbuzz.FizzBuzzEvaluator((byte) 83));
-     }
- 
-     @Test
-     public void testContainsDigitFiveOnly() {
-         assertEquals("Buzz", Fizzbuzz.FizzBuzzEvaluator((byte) 52));
-         assertEquals("Buzz", Fizzbuzz.FizzBuzzEvaluator((byte) 58));
-         assertEquals("Buzz", Fizzbuzz.FizzBuzzEvaluator((byte) 59));
-     }
+    // Test containing the digits only, not divisible
+    @Test
+    public void testContainsDigitThreeOnly() {
+        assertEquals("Fizz", Fizzbuzz.FizzBuzzEvaluator((byte) 13));
+        assertEquals("Fizz", Fizzbuzz.FizzBuzzEvaluator((byte) 37));
+        assertEquals("Fizz", Fizzbuzz.FizzBuzzEvaluator((byte) 83));
+    }
 
-    // Test combination logic 
+    @Test
+    public void testContainsDigitFiveOnly() {
+        assertEquals("Buzz", Fizzbuzz.FizzBuzzEvaluator((byte) 52));
+        assertEquals("Buzz", Fizzbuzz.FizzBuzzEvaluator((byte) 58));
+        assertEquals("Buzz", Fizzbuzz.FizzBuzzEvaluator((byte) 59));
+    }
+
+    // Test divisibility and containing digits
+    @Test
+    public void testtDivisibleAndContainsDigitThree() {
+        assertEquals("Fizz", Fizzbuzz.FizzBuzzEvaluator((byte) 30));
+        assertEquals("Fizz", Fizzbuzz.FizzBuzzEvaluator((byte) 33));
+        assertEquals("Fizz", Fizzbuzz.FizzBuzzEvaluator((byte) 93));
+    }
+
+    @Test
+    public void testtDivisibleAndContainsDigitFive() {
+        assertEquals("Buzz", Fizzbuzz.FizzBuzzEvaluator((byte) 15));
+        assertEquals("Buzz", Fizzbuzz.FizzBuzzEvaluator((byte) 55));
+        assertEquals("Buzz", Fizzbuzz.FizzBuzzEvaluator((byte) 95));
+    }
+
     // Test divisibility both 3 and 5
     @Test
     public void testDivisibleByThreeAndFive() {
