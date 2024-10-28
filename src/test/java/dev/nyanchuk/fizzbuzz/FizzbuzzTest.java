@@ -9,10 +9,11 @@ public class FizzbuzzTest {
     @Test
     public void testOutOfRange() {
         String response = "Use the range 1 to 100";
-        assertEquals(response, Fizzbuzz.FizzBuzzEvaluator((byte) -120));
-        assertEquals(response, Fizzbuzz.FizzBuzzEvaluator((byte) -1));
         assertEquals(response, Fizzbuzz.FizzBuzzEvaluator((byte) 0));
+        assertEquals(response, Fizzbuzz.FizzBuzzEvaluator((byte) -1));
+        assertEquals(response, Fizzbuzz.FizzBuzzEvaluator((byte) 50));
         assertEquals(response, Fizzbuzz.FizzBuzzEvaluator((byte) 127));
+        assertEquals(response, Fizzbuzz.FizzBuzzEvaluator((byte) -128));
     }
 
     // Test single divisibility
