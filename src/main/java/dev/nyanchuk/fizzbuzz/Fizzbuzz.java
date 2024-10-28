@@ -9,20 +9,20 @@ public class Fizzbuzz {
     }
 
     // function
-    public static String FizzBuzzEvaluator1(byte num) {
-        if (num < 1 || num > 100) {
+    public static String FizzBuzzEvaluator(byte num) {
+        if ((num < 1) || (num > 100)) {
             return "Use the range 1 to 100";
         }
-        if (num % 3 == 0 && num % 5 == 0) {
+        if ((num % 3 == 0) && (num % 5 == 0)) {
             return "FizzBuzz";
         }
-        if (num % 3 == 0) {
+        if ((num % 3 == 0) || String.valueOf(num).contains("3")) {
             return "Fizz";
         }
-        if (num % 5 == 0) {
+        if ((num % 5 == 0) || String.valueOf(num).contains("5")) {
             return "Buzz";
         }
         return String.valueOf(num);
     }
-
 }
+

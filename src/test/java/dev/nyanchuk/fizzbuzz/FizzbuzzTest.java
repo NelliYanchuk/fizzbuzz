@@ -9,10 +9,10 @@ public class FizzbuzzTest {
     @Test
     public void testOutOfRange() {
         String response = "Use the range 1 to 100";
-        assertEquals(response, Fizzbuzz.FizzBuzzEvaluator1((byte) -120));
-        assertEquals(response, Fizzbuzz.FizzBuzzEvaluator1((byte) -1));
-        assertEquals(response, Fizzbuzz.FizzBuzzEvaluator1((byte) 0));
-        assertEquals(response, Fizzbuzz.FizzBuzzEvaluator1((byte) 127));
+        assertEquals(response, Fizzbuzz.FizzBuzzEvaluator((byte) -120));
+        assertEquals(response, Fizzbuzz.FizzBuzzEvaluator((byte) -1));
+        assertEquals(response, Fizzbuzz.FizzBuzzEvaluator((byte) 0));
+        assertEquals(response, Fizzbuzz.FizzBuzzEvaluator((byte) 127));
     }
 
     // Test single divisibility
@@ -20,7 +20,7 @@ public class FizzbuzzTest {
     public void testDivisibleByThree() {
         for (byte i = 1; i <= 100; i++) {
             if ((i % 3 == 0) && (i % 5 != 0)) {
-                assertEquals("Fizz", Fizzbuzz.FizzBuzzEvaluator1(i));
+                assertEquals("Fizz", Fizzbuzz.FizzBuzzEvaluator(i));
             }
         }
     }
@@ -29,7 +29,7 @@ public class FizzbuzzTest {
     public void testDivisibleByFive() {
         for (byte i = 1; i <= 100; i++) {
             if ((i % 5 == 0) && (i % 3 != 0)) {
-                assertEquals("Buzz", Fizzbuzz.FizzBuzzEvaluator1(i));
+                assertEquals("Buzz", Fizzbuzz.FizzBuzzEvaluator(i));
             }
         }
     }
@@ -39,7 +39,7 @@ public class FizzbuzzTest {
     public void testDivisibleByThreeAndFive() {
         for (byte i = 1; i <= 100; i++) {
             if ((i % 3 == 0) && (i % 5 == 0)) {
-                assertEquals("FizzBuzz", Fizzbuzz.FizzBuzzEvaluator1(i));
+                assertEquals("FizzBuzz", Fizzbuzz.FizzBuzzEvaluator(i));
             }
         }
     }
@@ -49,7 +49,7 @@ public class FizzbuzzTest {
     public void testNotDivisibleByThreeOrFive() {
         for (byte i = 1; i <= 100; i++) {
             if ((i % 3 != 0) && (i % 5 != 0)) {
-                assertEquals(String.valueOf(i), Fizzbuzz.FizzBuzzEvaluator1(i));
+                assertEquals(String.valueOf(i), Fizzbuzz.FizzBuzzEvaluator(i));
             }
         }
     }
@@ -58,7 +58,7 @@ public class FizzbuzzTest {
     @Test
     public void testConstructor() {
         Fizzbuzz fizzbuzzInstance = new Fizzbuzz((byte) 1); // Set a value to test the constructor
-        assertEquals("FizzBuzz", Fizzbuzz.FizzBuzzEvaluator1((byte) 15)); // Test a valid input
+        assertEquals("FizzBuzz", Fizzbuzz.FizzBuzzEvaluator((byte) 15)); // Test a valid input
     }
 
 }
