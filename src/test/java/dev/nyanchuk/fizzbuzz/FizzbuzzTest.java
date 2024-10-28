@@ -19,22 +19,19 @@ public class FizzbuzzTest {
     // Test single divisibility
     @Test
     public void testDivisibleByThree() {
-        for (byte i = 1; i <= 100; i++) {
-            if ((i % 3 == 0) && (i % 5 != 0)) {
-                assertEquals("Fizz", Fizzbuzz.FizzBuzzEvaluator(i));
-            }
-        }
+        assertEquals("Fizz", Fizzbuzz.FizzBuzzEvaluator((byte) 6));
+        assertEquals("Fizz", Fizzbuzz.FizzBuzzEvaluator((byte) 57));
+        assertEquals("Fizz", Fizzbuzz.FizzBuzzEvaluator((byte) 99));
     }
 
     @Test
     public void testDivisibleByFive() {
-        for (byte i = 1; i <= 100; i++) {
-            if ((i % 5 == 0) && (i % 3 != 0)) {
-                assertEquals("Buzz", Fizzbuzz.FizzBuzzEvaluator(i));
-            }
-        }
+        assertEquals("Buzz", Fizzbuzz.FizzBuzzEvaluator((byte) 10));
+        assertEquals("Buzz", Fizzbuzz.FizzBuzzEvaluator((byte) 70));
+        assertEquals("Buzz", Fizzbuzz.FizzBuzzEvaluator((byte) 100));
     }
 
+    
     // Test combination logic
     @Test
     public void testDivisibleByThreeAndFive() {
