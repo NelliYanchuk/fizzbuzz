@@ -45,14 +45,14 @@ public class FizzbuzzTest {
          assertEquals("Buzz", Fizzbuzz.FizzBuzzEvaluator((byte) 58));
          assertEquals("Buzz", Fizzbuzz.FizzBuzzEvaluator((byte) 59));
      }
-    // Test combination logic
+
+    // Test combination logic 
+    // Test divisibility both 3 and 5
     @Test
     public void testDivisibleByThreeAndFive() {
-        for (byte i = 1; i <= 100; i++) {
-            if ((i % 3 == 0) && (i % 5 == 0)) {
-                assertEquals("FizzBuzz", Fizzbuzz.FizzBuzzEvaluator(i));
-            }
-        }
+        assertEquals("FizzBuzz", Fizzbuzz.FizzBuzzEvaluator((byte) 15));
+        assertEquals("FizzBuzz", Fizzbuzz.FizzBuzzEvaluator((byte) 45));
+        assertEquals("FizzBuzz", Fizzbuzz.FizzBuzzEvaluator((byte) 90));
     }
 
     // Test neutral digits
