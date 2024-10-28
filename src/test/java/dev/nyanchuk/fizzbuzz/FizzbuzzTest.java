@@ -57,7 +57,7 @@ public class FizzbuzzTest {
 
     // Test of constructor
     @Test
-    public void testConstructor() {
+    public void testConstructor2() {
         Fizzbuzz fizzbuzzInstance = new Fizzbuzz((byte) 1); // Set a value to test the constructor
         assertEquals("FizzBuzz", Fizzbuzz.FizzBuzzEvaluator((byte) 15)); // Test a valid input
     }
